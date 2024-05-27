@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{a4paper, total = {170mm, 257mm}, left = 20mm, top = 20mm}
+
+\title{\textbf{Assignment 1}}
+\author{Bishal Karmakar}
+\date{March 05, 2024}
+\usepackage{color}
+
+\begin{document}
+\maketitle
+\noindent\hrulefill
+\section{Text}
+This is a template on text. You can add text anything like this which will show up in the PDF after compile.
+
+\subsection{Subsection}
+This area for subsection of the previous text. You need to add one or more subsection.
+
+\section{Coloured Text}
+The colour of text can also be \textcolor{red}{easily} set. To print in text in red color you can use \verb| \textcolor{red}{easily} |
+
+\section{Itemized Text}
+Here you need to add some text in bullet list.
+\begin{itemize}
+  \item First Item
+  \item Second Item
+\end{itemize}
+
+\subsection{Ordered List}
+This section for text in a particular order.
+\begin{enumerate}
+  \item First Item
+  \item Second Item
+\end{enumerate}
+
+\section{Special characters}
+\begin{enumerate}
+  \item Commands start with a backslash \verb | \ |.
+  \item A percent sign \% starts a comment. LATEX will ignore the rest of the line.
+  \item Superscript and Subscript
+
+  \[ a_1^2 + a_2^2 = a_3^2 \]
+  to write this we need to write as follows: \\
+  \verb | \[ a_1^2 + a_2^2 = a_3^2 \] |
+  
+
+  \item The following characters play a special role in LaTeX and are called ”special printing characters”, or simply ”special characters”.
+  \# \$ \% \& \~{} \^{} \{ \} 
+
+  Whenever you put one of these special characters into your file, you are doing something special. If you simply want the character to be printed just as any other letter, include a \textbackslash{} in front of the character. For example, \textbackslash\$ will produce
+\end{enumerate}
+\end{document}
