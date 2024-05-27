@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{\huge\textbf{Different Forms Of Tables \\ (Part-1)}}
+\author{\large{Bishal Karmakar}}
+\date{13 April 2024}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Images are essential elements in most scientific documents. LATEX provides
+several options to handle images and make them look exactly what you need
+using the figure environment and the graphicx package. In this article, we
+explain how to include images in the most common formats, how to shrink,
+enlarge and rotate them, and how to reference them within your document.
+\par The figure environment takes care of the numbering and positioning of the
+image within the document. In order to include a figure, you must use the
+$\backslash$includegraphics command. It takes the image width as an option in brackets
+and the path to your image file.
+
+\begin{figure}[h]
+   
+    \includegraphics[width=5cm,height=4cm]
+    {overleaf}
+    \centering
+    \caption{ Sample 1}
+    \label{model1}
+\end{figure}
+\subsection{Various Formats for Changing the Image Size}
+The below figures show how to import a picture. If we want to further specifyhow LATEX should include our image in the document (length, height, etc.),we can pass those settings. The parameters inside the brackets [width=5cm,
+\begin{figure}[t]
+    \includegraphics[width=\linewidth]
+    {overleaf}
+    \centering
+    \caption{ Sample 2}
+    \label{model2}
+\end{figure}
+height=4cm] define the width and height of the picture, as shown in Figure \ref{model1}.
+You can use different units for these parameters.
+We can see that the $\backslash$linewidth command is used in the brackets, which means the picture will be scaled to fit the width of the document, as shown in Figure \ref{model2}.
+\newpage
+The command $\backslash$includegraphics[scale=1.5]\{overleaf\} will include the image overleaf-logo in the document, the extra parameter scale=1.5 will do exactly that, scale the image 1.5 of its real size as shown in Figure \ref{model3}.
+\begin{figure}[h]
+    \includegraphics[scale=1.5]
+    {overleaf}
+    \centering
+    \caption{ Sample 3}
+    \label{model3}
+\end{figure}
+If only the width parameter is passed, the height will be scaled to keep the aspect ratio, as shown in Figure \ref{model4}. The length of units can also be relative to some elements in the document. If you want, for instance, make a picture the same width as the text, as shown in Figure \ref{model5}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=7cm, height=5cm]{overleaf}
+    \caption{Sample 4}
+    \label{model4}
+\end{figure}
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm, height=9cm]{overleaf}
+    \caption{Sample 5}
+    \label{model5}
+\end{figure}
+There is another common option when including a picture within your document to rotate it. It can easily be accomplished in LATEX. The parameter
+angle=45 rotates the picture 45 degrees counter-clockwise, as shown in Figure 6. To rotate the picture clockwise, use a negative number, as shown in Figure7.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm, height=2cm,angle=45]{overleaf}
+    \caption{Sample 6}
+    \label{model6}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm, height=2cm,angle=-45]{overleaf}
+    \caption{Sample 7}
+    \label{model7}
+\end{figure}
+If we want to reduce the size of the picture, as shown in Figure \ref{model8}, we can also implement it with the help of changing the width of textwidth.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=2cm, height=3cm]{overleaf}
+    \caption{Sample 8}
+    \label{model8}
+\end{figure}
+\end{document}

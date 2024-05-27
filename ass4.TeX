@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+% \usepackage{geometry}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{float}
+% \geometry{a4paper, total = {170mm, 257mm}, left = 16mm, top = 0mm}
+\title{Different Forms of Table} \author{Bishal Karmakar} 
+\begin{document}
+
+\title{\textbf{Different Forms of Tables}\\\textbf{ (Part-3)}}
+\author{Bishal Karmakar}
+\date{2 April 2024}
+\maketitle
+\listoftables{}
+
+\section{List of Tables}
+To create a list of tables use the \textbackslash listoftables{} command. The caption of each table will be used to generate this list.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{||c c c c||}
+\hline
+
+Col1 & Col2 & Col3 & Col4 \\
+\hline
+\hline
+1 & 6 & 87837 & 787 \\
+2 & 7 & 78 & 5415 \\
+3 & 545 & 778 & 7507 \\
+4 & 545 & 18744 & 7560 \\
+5 & 88 & 788 & 6344 \\
+\hline
+\end{tabular}
+\caption{This is the caption for the first table.}
+\label{tab:sample5}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{||c c c c||}
+\hline
+
+Col1 & Col2 & Col3 & Col4 \\
+\hline
+\hline
+4 & 545 & 18744 & 7560 \\
+5 & 88 & 788 & 6344 \\
+\hline
+\end{tabular}
+\caption{This is the caption for the second table.}
+\label{tab:sample5}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|}
+\hline
+\multicolumn{10}{|c|}{Demo of a Complex Form of Table} \\
+\hline
+Weights & $\tau$ & $E^{(C)}$ & $T^{(D)}$ & $\beta^{(Avg)}$ & $F^{(50+100)}$ & Ct & $W^{(C)}$ & $Bo^{(\alpha)}$ & $Bo^{(\gamma)}$\\
+$(\alpha)$ & $(w_{2}^{(nl)})$ & $(w_{4}^{(nl)})$ & $(w_{6}^{(nl)})$ & $(w_{8}^{(nl)})$ & $(w_{10}^{(nl)})$ & $(w_{12}^{(nl)})$ & $(w_{14}^{(nl)})$ & $(w_{16}^{(nl)})$ & $(w_{18}^{(nl)})$\\
+\hline
++0.01 & 0.081 & 0.131 & 0.013 & 0.132 & 0.150 & 0.122 & -0.074 & 0.014 & 0.002 \\
+-0.01 & 0.082 & 0.138 & 0.007 & 0.139 & 0.159 & 0.128 & -0.091 & 0.007 & -0.005 \\
++0.03 & 0.080 & 0.126 & 0.019 & 0.126 & 0.142 & 0.117 & -0.060 & 0.019 & 0.009 \\
+\hline
+\end{tabularx}
+\caption{Creating Complex Tables-1.}
+\label{tab:sample5}
+\end{table}
+
+
+
+\section{Creating Complex Tables}
+Here we will see how to create complex forms of tables by incorporating various mathematical symbolic representations like $\tau$ , $\beta$, etc. Furthermore, we will see how to use both subscripts and superscripts involving exponents, indexes, and some special operators in the same mathematical expressions, such as $(w_{8}^{(nl)})$, $(w_{16}^{(nl)})$. Table 3 displays all of the types.
+
+
+\section{Assignment to be done}
+The following Table 4 is to be executed as an assignment.
+
+\begin{table}[h!]
+\centering
+\scalebox{0.8}{
+
+\begin{tabular}{|*{18}{c|}}  % repeats {c|} 18 times
+\hline
+\multicolumn{9}{|c}{k-means clustering} & \multicolumn{9}{|c|}{Fuzzy c-means clustering} \\ \hline
+\multicolumn{3}{|c}{50 clusters} & \multicolumn{3}{|c}{60 clusters} & \multicolumn{3}{|c}{70 clusters} & 
+\multicolumn{3}{|c}{50 clusters} & \multicolumn{3}{|c}{60 clusters} & \multicolumn{3}{|c|}{70 clusters} \\ \hline 
+CJ & HT & SVD &CJ & HT & SVD &CJ & HT & SVD &CJ & HT & SVD &CJ & HT & SVD &CJ & HT & SVD \\ \hline
+ & & & & & & & & & & & & & & & & &  \\ \hline
+\end{tabular}
+}
+\caption{Creating Complex Tables-2.}
+\label{tab:sample5}
+\end{table}
+
+
+
+
+\end{document}

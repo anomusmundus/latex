@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{\textbf{Different Forms of Tables}\\\textbf{ (Part-2)}}
+\author{Bishal Karmakar}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+This article explains how to use LaTeX to create and customize tables: changing size/spacing, showing caption of tables (below or above), use of positioning parameters, highlighting labels for tables, and changing the direction of the table.
+
+\subsection{Sample 5}
+Captions, labels: \\
+There are two important commands used as follows:
+\begin{enumerate}
+  \item \texttt{\textbackslash caption\{\}}: This command is used to make a caption for the table which is placed either above or below the table.
+  \item \texttt{\textbackslash label\{\}}: This command is used to refer to a table within a document.
+\end{enumerate}
+
+\subsubsection{Positioning parameters and use of \texttt{\textbackslash ref\{\}} command}
+The parameter \texttt{h!} passed to the table environment declaration establishes that this table must be placed here, and override LATEX defaults as shown in Table~\ref{tab:sample5}. The positioning parameters that can be passed in include:
+\begin{itemize}
+  \item \texttt{h}: Will place the table here approximately.
+  \item \texttt{t}: Position the table at the top of the page.
+  \item \texttt{b}: Position the table at the bottom of the page.
+  \item \texttt{p}: Position the table at the top of the next page.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{||c c c c||}
+\hline
+
+Col1 & Col2 & Col3 & Col4 \\
+\hline
+\hline
+1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 \\
+9 & 10 & 11 & 12 \\
+13 & 14 & 15 & 16 \\
+17 & 18 & 19 & 20 \\
+\hline
+\end{tabular}
+\caption{Table to test 1st positioning parameter (h!)}
+\label{tab:sample5}
+\end{table}
+
+\subsubsection{To set up the width of table columns}
+Here we will see how we can set up the width of columns by specifying a particular width as shown in Table~\ref{tab:sample6}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+Country List & Country Name or Area Name & ISO ALPHA 2 Code & ISO ALPHA 3 Code \\
+\hline
+Afghanistan & AF & AFG & 004 \\
+Aland Islands & AX & ALA & 248 \\
+Albania & AL & ALB & 008 \\
+\hline
+\end{tabular}
+\caption{Table to set up the width of table columns}
+\label{tab:sample6}
+\end{table}
+
+\subsubsection{How to put a caption on top of the Latex table and use of \texttt{\textbackslash vspace\{\}} command}
+Here we will show how to put a caption on top of Latex table and adjust the height of the space between the caption and tabular by using the \texttt{\textbackslash vspace\{\}} command. Here the table is placed at the bottom of the page as shown in Table~\ref{tab:sample7}.
+
+\begin{table}[b]
+\centering
+\vspace{1cm}
+\begin{tabular}{|c|c|c|}
+\hline
+Col1 & Col2 & Col3 \\
+\hline
+1 & 6 & 87837 \\
+2 & 7 & 78 \\
+3 & 545 & 778 \\
+4 & 545 & 18744 \\
+5 & 88 & 788 \\
+\hline
+\end{tabular}
+\caption{Table to test 2nd positioning parameter (b) with the alignment of table columns and caption on top of table}
+\label{tab:sample7}
+\end{table}
+
+\section{Sample 6}
+Reducing the size of an entire Latex table: \\
+Here we will see how we are reducing the size of an entire Latex table by using the \texttt{\textbackslash scalebox\{\}} command as shown in Table~\ref{tab:sample8}. We also need to use the \texttt{\textbackslash usepackage\{tcolorbox\}} for implementing the below table.
+
+\begin{table}[h!]
+\centering
+\scalebox{0.8}{
+\begin{tabular}{|c|c|c|c|}
+\hline
+Col1 & Col2 & Col3 & Col4 \\
+\hline
+1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 \\
+9 & 10 & 11 & 12 \\
+13 & 14 & 15 & 16 \\
+17 & 18 & 19 & 20 \\
+\hline
+\end{tabular}
+}
+\caption{Table to show a reduction of the size of an entire Latex table}
+\label{tab:sample8}
+\end{table}
+
+\section{Sample 7}
+You can also change the mode to the landscape mode by using the \texttt{\textbackslash usepackage\{adjustbox\}} command. The table here begins with the \texttt{\textbackslash begin\{adjustbox\}} and ends with the \texttt{\textbackslash end\{adjustbox\}}.
+
+The following Table~\ref{tab:sample9} and Table~\ref{tab:sample10} help us to understand this.
+\begin{table}[h!]
+\centering
+\begin{adjustbox}{angle=90}
+\begin{tabular}{|c|c|c|}
+\hline
+heading 1 & heading 2 & heading 3 \\
+\hline
+$\alpha$ & $\beta$ & $\gamma$ \\
+1 & 11.34 & a \\
+2 & 10.5 & b \\
+3 & 765.5231 & c \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Highlighting rotating of table, angle = 90 degree}
+\label{tab:sample9}
+\end{table}
+
+
+
+For example, if we set the angle to 270 degrees in the same code as used for
+the implementation of the previous table (Table 5), the output will look like the
+image given below (Table 6):
+\begin{table}[h!]
+\centering
+\begin{adjustbox}{angle=270}
+\begin{tabular}{|c|c|c|}
+\hline
+heading 1 & heading 2 & heading 3 \\
+\hline
+$\alpha$ & $\beta$ & $\gamma$ \\
+1 & 11.34 & a \\
+2 & 10.5 & b \\
+3 & 765.5231 & c \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Highlighting rotating of table, angle = 270 degree}
+\label{tab:sample9}
+\end{table}
+\end{document}
+

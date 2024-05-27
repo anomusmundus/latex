@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{multirow}
+\usepackage{geometry}
+\geometry{a4paper, total = {170mm, 257mm}, left = 20mm, top = 20mm}
+\title{Different Forms of Table} \author{Bishal Karmakar} \date{March 12, 2024}
+\begin{document}
+\maketitle
+\section{Introduction}
+This article explains how to use LATEX to create and customize tables: changing size\textbackslash 
+spacing, combining rows and columns of cells.
+\subsection{Sample 1}
+Following is the code and result of a simple table created. The tabular environment is the default 
+LATEX method to create tables. You must specify a parameter to this environment; here we use \{c 
+c c\} which tells LATEX there are three columns and the text inside each one of them must be 
+centered.
+\begin{center}
+\begin{tabular}{c c c}
+cell1 & cell2 & cell3\\
+cell4 & cell5 & cell6\\
+cell7 & cell8 & cell9\\
+\end{tabular}
+\end{center}
+\subsection{Sample 2}
+The tabular environment provides additional flexibility for example you can put separator lines in 
+between each column. the \textbackslash hline command is used to put a horizontal line on the top 
+and bottom of the table. Creating a table with boundaries is demonstrated below:
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+\hline
+cell1 & cell2 & cell3 \\
+cell4 & cell5 & cell6 \\
+cell7 & cell8 & cell9 \\
+\hline
+\end{tabular}
+\end{center}
+\subsection{Sample 3}
+We have created a slightly more complex form of table with more rows and columns with a 
+applicaion of \textbackslash hline command as per requirement.
+\begin{center}
+\begin{tabular}{|c c c c|} 
+\hline
+Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+\hline\hline
+1 & 6 & 87837 & 787 \\
+\hline
+2 & 7 & 78 & 5415 \\
+\hline
+3 & 545 & 778 & 7507 \\
+\hline
+4 & 545 & 18744 & 7560 \\
+\hline
+5 & 88 & 788 & 6344 \\ [1ex] 
+\hline
+\end{tabular}
+\end{center}
+\subsection{Sample 4}
+\textbf{Combining rows and columns:}
+The command \textbackslash multicolumn and \textbackslash multirow are used to combine rows 
+and columns in a table in LATEX.
+\subsubsection{Example of multi-column is demonstrated below:}
+The number of columns to be combined is displayed in \textbackslash multicolumn \{\}.
+\begin{center} \begin{tabular}{ |p{2cm}|p{2cm}|p{2cm}| }
+\hline
+\multicolumn{3}{|c|}{Books} \\
+\hline
+Food name& Author &Publication\\
+\hline
+Book1 & Author1 &P1\\
+Book2 & Author2 & P2\\
+Book3 & Author3 & P3\\
+\hline
+\end{tabular} \end{center}
+\subsubsection{Example of multi-row is demonstrated below:}
+The number of rows to be combined is displayed in \textbackslash multirow \{\}.
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+\hline
+col1 & col2 & col3 \\
+\hline
+\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\
+& cell5 & cell6 \\
+& cell8 & cell9 \\
+\hline
+\end{tabular}
+\end{center}
+\section{Prepare a record in the form of a table showing the results of a student in 10th standard, 
+12th standard, and graduation result serially(SL. no as one column) highlighting the 
+boards/University and year of passing in each case in separates columns.}
+\begin{center}
+ \begin{tabular}{ |p{2cm}|p{2cm}|p{2cm}|p{2cm}| }
+ \hline
+ \multicolumn{4}{|c|}{Name of the Student} \\
+ \hline
+ Sl No.& Standard & Board & Percentage\\
+ \hline
+ & & &\\
+ & & &\\
+ \hline
+\end{tabular}
+\end{center}
+\end{document}
